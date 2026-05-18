@@ -30,10 +30,12 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t kokareyes11/docker-graphql:0.0.2 .
+        docker build -t kokareyes11/docker-graphql:latest .
 
     - name: Push Docker Image
       run: |
         docker push kokareyes11/docker-graphql:0.0.2
+        docker push kokareyes11/docker-graphql:latest
         
     # docker build -t kokareyes11/docker-graphql:0.0.1 .
     # - name: Build the Docker image
